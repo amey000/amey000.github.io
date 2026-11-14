@@ -270,6 +270,7 @@ strong { color: var(--text); font-weight: 600; }
 .edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .edu__item { display: flex; flex-direction: column; gap: 0.4rem; }
 .edu__item .pill { align-self: flex-start; margin-bottom: 0.4rem; }
+.edu__courses { margin-top: 0.5rem; }
 .edu__date { color: var(--muted); font-size: 0.82rem; margin-top: auto; padding-top: 0.6rem; }
 
 /* Engagement */
