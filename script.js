@@ -132,12 +132,14 @@ const META = {
     desc: document.querySelector('meta[name="description"]').content,
     roles: ['Data Analyst', 'SQL- & Redshift-Spezialist', 'BI & Reporting-Automatisierung', 'ML- & GenAI-Entwickler'],
     mailSubject: name => `Kontakt über Portfolio von ${name}`,
+    cv: { href: 'assets/Amey_Shete_CV.pdf', file: 'Amey_Shete_Lebenslauf.pdf' },
   },
   en: {
     title: 'Amey Shete | Data Analyst & AI Engineer',
     desc: "Portfolio of Amey Shete: Data Analyst with 1.5+ years at Amazon and Master's coursework in Artificial Intelligence & Robotics. SQL, Python, Redshift, ML and generative AI.",
     roles: ['Data Analyst', 'SQL & Redshift Specialist', 'BI & Reporting Automation', 'ML & GenAI Builder'],
     mailSubject: name => `Portfolio contact from ${name}`,
+    cv: { href: 'assets/Amey_Shete_CV_EN.pdf', file: 'Amey_Shete_CV.pdf' },
   },
 };
 
@@ -168,6 +170,10 @@ function setLang(next) {
   document.title = META[next].title;
   document.querySelector('meta[name="description"]').content = META[next].desc;
   langBtn.dataset.active = next;
+  document.querySelectorAll('a[data-cv]').forEach(a => {
+    a.setAttribute('href', META[next].cv.href);
+    a.setAttribute('download', META[next].cv.file);
+  });
   resetTyping();
 }
 langBtn.dataset.active = 'de';
