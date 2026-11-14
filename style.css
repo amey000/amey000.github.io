@@ -97,6 +97,16 @@ strong { color: var(--text); font-weight: 600; }
 .icon-sun { display: none; }
 :root[data-theme="light"] .icon-sun { display: block; }
 :root[data-theme="light"] .icon-moon { display: none; }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 2px; padding: 3px; height: 40px;
+  border-radius: 10px; border: 1px solid var(--border); background: var(--card);
+  cursor: pointer; font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
+  transition: border-color 0.2s;
+}
+.lang-btn:hover { border-color: var(--accent); }
+.lang-btn__opt { padding: 0 9px; height: 100%; display: grid; place-items: center; border-radius: 7px; color: var(--muted); transition: background 0.2s, color 0.2s; }
+.lang-btn[data-active="de"] [data-lang="de"],
+.lang-btn[data-active="en"] [data-lang="en"] { background: var(--accent-soft); color: var(--accent); }
 .nav__burger { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
 .nav__burger span { width: 18px; height: 2px; background: currentColor; border-radius: 2px; transition: 0.3s; }
 .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }

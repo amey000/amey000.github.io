@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amey Shete | Data Analyst & AI Engineer</title>
-  <meta name="description" content="Portfolio of Amey Shete: Data Analyst with 1.5+ years at Amazon and Master's coursework in Artificial Intelligence & Robotics. SQL, Python, Redshift, ML and generative AI." />
+  <title>Amey Shete | Data Analyst &amp; KI-Engineer</title>
+  <meta name="description" content="Portfolio von Amey Shete: Data Analyst mit über 1,5 Jahren Berufserfahrung bei Amazon und Masterstudium (30 ECTS) in Künstlicher Intelligenz und Robotik. SQL, Python, Redshift, Machine Learning und generative KI." />
   <link rel="icon" href="assets/img/profile.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <script>
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
@@ -32,19 +32,23 @@
     <div class="nav__inner container">
       <a href="#home" class="nav__logo">Amey<span>.</span></a>
       <nav class="nav__links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">Über mich</a>
+        <a href="#experience" data-i18n="nav.experience">Erfahrung</a>
+        <a href="#projects" data-i18n="nav.projects">Projekte</a>
+        <a href="#skills" data-i18n="nav.skills">Kenntnisse</a>
+        <a href="#education" data-i18n="nav.education">Ausbildung</a>
+        <a href="#contact" data-i18n="nav.contact">Kontakt</a>
       </nav>
       <div class="nav__actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">
+        <button class="lang-btn" id="langToggle" type="button" aria-label="Switch to English" data-i18n-aria="lang.aria">
+          <span class="lang-btn__opt" data-lang="de">DE</span>
+          <span class="lang-btn__opt" data-lang="en">EN</span>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Farbschema wechseln" data-i18n-aria="theme.aria">
           <svg class="icon-sun"><use href="#i-sun"/></svg>
           <svg class="icon-moon"><use href="#i-moon"/></svg>
         </button>
-        <button class="icon-btn nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <button class="icon-btn nav__burger" id="burger" aria-label="Menü öffnen" data-i18n-aria="menu.aria" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -55,79 +59,79 @@
     <!-- HERO -->
     <section class="hero container" id="home">
       <div class="hero__text">
-        <p class="hero__eyebrow mono"><span class="dot"></span> Open to Data Analyst & Working Student roles · Germany</p>
-        <h1 class="hero__title">Hi, I'm <span class="grad">Amey Shete</span></h1>
+        <p class="hero__eyebrow mono"><span class="dot"></span> <span data-i18n="hero.eyebrow">Offen für Data-Analyst- &amp; Werkstudentenstellen · Deutschland</span></p>
+        <h1 class="hero__title"><span data-i18n="hero.hi">Hallo, ich bin</span> <span class="grad">Amey Shete</span></h1>
         <p class="hero__role mono">&gt; <span id="typed">Data Analyst</span><span class="caret">|</span></p>
-        <p class="hero__bio">
-          Data Analyst with 1.5+ years at <strong>Amazon</strong> and Master's coursework in
-          <strong>Artificial Intelligence &amp; Robotics</strong>. I turn raw data into decisions with SQL,
-          Python and Amazon Redshift, and build practical ML &amp; generative-AI systems, including a
-          GDPR-compliant local RAG pipeline.
+        <p class="hero__bio" data-i18n="hero.bio">
+          Data Analyst mit über 1,5 Jahren Berufserfahrung bei <strong>Amazon</strong> und einem Masterstudium in
+          <strong>Künstlicher Intelligenz &amp; Robotik</strong>. Mit SQL, Python und Amazon Redshift mache ich aus
+          Rohdaten fundierte Entscheidungen und entwickle praxisnahe ML- und GenAI-Lösungen, darunter eine
+          DSGVO-konforme lokale RAG-Pipeline.
         </p>
 
         <div class="hero__cta">
-          <a href="#projects" class="btn btn--primary">View projects</a>
-          <a href="assets/Amey_Shete_CV.pdf" class="btn btn--ghost" download="Amey_Shete_CV.pdf"><svg><use href="#i-download"/></svg> Download CV</a>
-          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.ctaProjects">Projekte ansehen</a>
+          <a href="assets/Amey_Shete_CV.pdf" class="btn btn--ghost" download="Amey_Shete_CV.pdf"><svg><use href="#i-download"/></svg> <span data-i18n="hero.ctaCv">Lebenslauf herunterladen</span></a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.ctaContact">Kontakt aufnehmen</a>
         </div>
 
         <div class="hero__social">
           <a href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
           <a href="https://www.linkedin.com/in/14-amey-shete" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
-          <a href="mailto:amey05ks@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
-          <span class="hero__loc"><svg><use href="#i-pin"/></svg> Frankfurt am Main, Germany</span>
+          <a href="mailto:amey05ks@gmail.com" aria-label="E-Mail"><svg><use href="#i-mail"/></svg></a>
+          <span class="hero__loc"><svg><use href="#i-pin"/></svg> <span data-i18n="hero.loc">Frankfurt am Main, Deutschland</span></span>
         </div>
       </div>
 
       <div class="hero__visual">
         <div class="photo">
-          <img src="assets/img/profile.jpg" alt="Portrait of Amey Shete" width="413" height="531" />
+          <img src="assets/img/profile.jpg" alt="Porträt von Amey Shete" data-i18n-alt="hero.photoAlt" width="413" height="531" />
           <div class="photo__badge photo__badge--tl mono">SELECT insights<br/>FROM data;</div>
-          <div class="photo__badge photo__badge--br"><strong>ex-Amazon</strong><small>Data Analyst</small></div>
+          <div class="photo__badge photo__badge--br"><strong data-i18n="hero.badgeTop">Ex-Amazon</strong><small>Data Analyst</small></div>
         </div>
       </div>
     </section>
 
     <!-- STATS -->
     <section class="container stats reveal">
-      <div class="stat"><span class="stat__num" data-count="1.5" data-suffix="+">0</span><span class="stat__label">Years at Amazon</span></div>
-      <div class="stat"><span class="stat__num" data-count="30">0</span><span class="stat__label">ECTS in AI &amp; Robotics</span></div>
-      <div class="stat"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__label">AI / ML projects</span></div>
-      <div class="stat"><span class="stat__num" data-count="100" data-suffix="+">0</span><span class="stat__label">People trained in cyber security</span></div>
+      <div class="stat"><span class="stat__num" data-count="1.5" data-suffix="+">0</span><span class="stat__label" data-i18n="stats.years">Jahre bei Amazon</span></div>
+      <div class="stat"><span class="stat__num" data-count="30">0</span><span class="stat__label" data-i18n="stats.ects">ECTS in KI &amp; Robotik</span></div>
+      <div class="stat"><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__label" data-i18n="stats.projects">KI- / ML-Projekte</span></div>
+      <div class="stat"><span class="stat__num" data-count="100" data-suffix="+">0</span><span class="stat__label" data-i18n="stats.trained">Teilnehmende im Cyber-Security-Seminar</span></div>
     </section>
 
     <!-- ABOUT -->
     <section class="section container" id="about">
       <div class="section__head reveal">
-        <span class="section__kicker mono">01 · About</span>
-        <h2>Data-driven, AI-curious</h2>
+        <span class="section__kicker mono" data-i18n="about.kicker">01 · Über mich</span>
+        <h2 data-i18n="about.title">Datengetrieben, KI-begeistert</h2>
       </div>
       <div class="about reveal">
         <div class="about__text">
-          <p>
-            At Amazon in Pune I built scalable data marts on Redshift, maintained ETL workflows, and automated
-            the dashboards and Weekly Business Review reports that teams used to make decisions. Root-cause
-            analysis and KPI monitoring were my daily work.
+          <p data-i18n="about.p1">
+            Bei Amazon in Pune habe ich skalierbare Data Marts auf Redshift aufgebaut, ETL-Workflows betreut und
+            die Dashboards sowie Weekly-Business-Review-Berichte automatisiert, auf deren Basis Teams ihre
+            Entscheidungen trafen. Ursachenanalysen und KPI-Monitoring gehörten zu meinem Arbeitsalltag.
           </p>
-          <p>
-            I then moved to Germany and completed 30 ECTS of Master's coursework in AI &amp; Robotics at
-            Hochschule Hof, covering data mining, machine learning and intelligent robotics, alongside my own
-            projects in LLMs, diffusion models and privacy-first AI. From February 2027 I'm going deeper into analytics with
-            an MSc in Data Analytics at BSBI Berlin.
+          <p data-i18n="about.p2">
+            Danach bin ich nach Deutschland gezogen und habe an der Hochschule Hof 30 ECTS im Master Künstliche
+            Intelligenz und Robotik absolviert, u.&nbsp;a. in Data Mining, Machine Learning und intelligenter
+            Robotik. Parallel dazu entstanden eigene Projekte rund um LLMs, Diffusionsmodelle und datenschutzfreundliche
+            KI. Ab Februar 2027 vertiefe ich mein Wissen im MSc Data Analytics an der BSBI Berlin.
           </p>
         </div>
         <div class="about__cards">
-          <div class="mini-card"><span class="mini-card__k mono">Languages</span>
+          <div class="mini-card"><span class="mini-card__k mono" data-i18n="about.langK">Sprachen</span>
             <ul class="lang">
-              <li><span>English</span><span class="pill">C1</span></li>
-              <li><span>German</span><span class="pill">B2</span></li>
+              <li><span data-i18n="about.langEn">Englisch</span><span class="pill">C1</span></li>
+              <li><span data-i18n="about.langDe">Deutsch</span><span class="pill">B2</span></li>
             </ul>
           </div>
-          <div class="mini-card"><span class="mini-card__k mono">Focus</span>
-            <p>SQL analytics · BI dashboards · ETL · ML &amp; GenAI</p>
+          <div class="mini-card"><span class="mini-card__k mono" data-i18n="about.focusK">Schwerpunkte</span>
+            <p data-i18n="about.focusV">SQL-Analysen · BI-Dashboards · ETL · ML &amp; GenAI</p>
           </div>
-          <div class="mini-card"><span class="mini-card__k mono">Based in</span>
-            <p>Frankfurt am Main, Germany</p>
+          <div class="mini-card"><span class="mini-card__k mono" data-i18n="about.basedK">Wohnort</span>
+            <p data-i18n="about.basedV">Frankfurt am Main, Deutschland</p>
           </div>
         </div>
       </div>
@@ -136,8 +140,8 @@
     <!-- EXPERIENCE -->
     <section class="section container" id="experience">
       <div class="section__head reveal">
-        <span class="section__kicker mono">02 · Experience</span>
-        <h2>Where I've worked</h2>
+        <span class="section__kicker mono" data-i18n="exp.kicker">02 · Berufserfahrung</span>
+        <h2 data-i18n="exp.title">Wo ich gearbeitet habe</h2>
       </div>
       <div class="timeline">
         <article class="tl-item reveal">
@@ -146,18 +150,18 @@
             <div class="card__top">
               <div>
                 <h3>Business Operations / Data Analyst</h3>
-                <p class="card__sub">Amazon · Pune, India</p>
+                <p class="card__sub" data-i18n="exp.where">Amazon · Pune, Indien</p>
               </div>
-              <span class="pill pill--accent">1.5 yrs</span>
+              <span class="pill pill--accent" data-i18n="exp.dur">1,5 Jahre</span>
             </div>
-            <ul class="bullets">
-              <li>Wrote and optimised complex <strong>SQL on Amazon Redshift</strong> to build scalable data marts for data warehousing and business reporting.</li>
-              <li>Designed and maintained <strong>ETL workflows</strong> to extract, transform and integrate large datasets.</li>
-              <li>Ran exploratory, trend and <strong>root cause analyses</strong> to monitor business KPIs and find operational improvements.</li>
-              <li>Automated dashboards and <strong>Weekly Business Review (WBR)</strong> reports that drove data-driven decisions.</li>
-              <li>Worked with cross-functional teams to scope requirements and present findings through reports and visualisations.</li>
+            <ul class="bullets" data-i18n="exp.bullets">
+              <li>Entwicklung und Optimierung komplexer <strong>SQL-Abfragen in Amazon Redshift</strong> zum Aufbau skalierbarer Data Marts für Data Warehousing und Business Reporting.</li>
+              <li>Konzeption und Pflege von <strong>ETL-Workflows</strong> zur Extraktion, Transformation und Integration großer Datenmengen.</li>
+              <li>Explorative Datenanalysen, Trend- und <strong>Ursachenanalysen</strong> zur Überwachung von Geschäfts-KPIs und Identifikation operativer Verbesserungspotenziale.</li>
+              <li>Automatisierung von Dashboards und <strong>Weekly-Business-Review-(WBR-)Berichten</strong> als Grundlage für datengetriebene Entscheidungen.</li>
+              <li>Zusammenarbeit mit funktionsübergreifenden Teams zur Analyse von Geschäftsanforderungen und Kommunikation von Erkenntnissen durch Berichte und Visualisierungen.</li>
             </ul>
-            <div class="tags"><span>SQL</span><span>Amazon Redshift</span><span>ETL</span><span>Data Warehousing</span><span>KPI Analysis</span><span>Dashboards</span></div>
+            <div class="tags"><span>SQL</span><span>Amazon Redshift</span><span>ETL</span><span>Data Warehousing</span><span data-i18n="tag.kpi">KPI-Analyse</span><span>Dashboards</span></div>
           </div>
         </article>
       </div>
@@ -166,21 +170,21 @@
     <!-- PROJECTS -->
     <section class="section container" id="projects">
       <div class="section__head reveal">
-        <span class="section__kicker mono">03 · Projects</span>
-        <h2>Things I've built</h2>
+        <span class="section__kicker mono" data-i18n="proj.kicker">03 · Projekte</span>
+        <h2 data-i18n="proj.title">Was ich gebaut habe</h2>
       </div>
       <div class="projects">
         <article class="project reveal">
           <div class="project__head">
             <span class="project__icon">🔒</span>
-            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="View on GitHub"><svg><use href="#i-github"/></svg></a>
+            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
           </div>
-          <h3>GDPR-Compliant Local RAG System</h3>
-          <p>A fully local retrieval-augmented generation pipeline that never sends data off the machine. German personal data is redacted before it ever becomes a vector.</p>
-          <ul class="bullets bullets--sm">
-            <li>Ollama (Llama 3 / Mistral) + Qdrant in an isolated Docker network</li>
-            <li>Microsoft Presidio redacts names, IBANs and phone numbers pre-embedding</li>
-            <li>multilingual-e5-large search with source-cited answers</li>
+          <h3 data-i18n="proj.rag.title">DSGVO-konformes lokales RAG-System</h3>
+          <p data-i18n="proj.rag.desc">Eine vollständig lokale Retrieval-Augmented-Generation-Pipeline: Keine Daten verlassen den Rechner, und deutsche personenbezogene Daten werden geschwärzt, bevor sie vektorisiert werden.</p>
+          <ul class="bullets bullets--sm" data-i18n="proj.rag.list">
+            <li>Ollama (Llama 3 / Mistral) und Qdrant in einem isolierten Docker-Netzwerk</li>
+            <li>Microsoft Presidio schwärzt Namen, IBANs und Telefonnummern vor der Vektorisierung</li>
+            <li>Vektorsuche mit multilingual-e5-large und quellenbasierte, zitierfähige Antworten</li>
           </ul>
           <div class="tags"><span>Python</span><span>Ollama</span><span>Qdrant</span><span>Presidio</span><span>Docker</span></div>
         </article>
@@ -188,13 +192,13 @@
         <article class="project reveal">
           <div class="project__head">
             <span class="project__icon">🎨</span>
-            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="View on GitHub"><svg><use href="#i-github"/></svg></a>
+            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
           </div>
           <h3>LISA: Hybrid LLM-Diffusion Architecture</h3>
-          <p>Couples GPT-4 with Stable Diffusion v1.5 to fix spatial layout errors in generated images, where objects end up in the wrong place.</p>
-          <ul class="bullets bullets--sm">
-            <li>LoRA fine-tuning on COCO 2017 on a 16 GB T4 using FP16 + gradient accumulation</li>
-            <li>Dual-metric evaluation: CLIP score + GPT-3.5 as judge</li>
+          <p data-i18n="proj.lisa.desc">Koppelt GPT-4 mit Stable Diffusion v1.5, um räumliche Layout-Fehler in generierten Bildern zu beheben, etwa wenn Objekte an der falschen Stelle landen.</p>
+          <ul class="bullets bullets--sm" data-i18n="proj.lisa.list">
+            <li>LoRA-Fine-Tuning auf COCO 2017 auf einer 16-GB-T4-GPU mittels FP16 und Gradient Accumulation</li>
+            <li>Dual-Metrik-Evaluation: CLIP-Score und GPT-3.5 als Bewerter</li>
           </ul>
           <div class="tags"><span>GPT-4</span><span>Stable Diffusion</span><span>LoRA</span><span>CLIP</span><span>PyTorch</span></div>
         </article>
@@ -202,14 +206,14 @@
         <article class="project reveal">
           <div class="project__head">
             <span class="project__icon">🩺</span>
-            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="View on GitHub"><svg><use href="#i-github"/></svg></a>
+            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
           </div>
           <h3>AI HealthGuard</h3>
-          <p>An end-to-end ML pipeline for health risk analysis, from raw medical data to an interactive prediction app.</p>
-          <ul class="bullets bullets--sm">
-            <li>EDA and feature engineering with Pandas &amp; Seaborn</li>
-            <li>Benchmarked Scikit-Learn classifiers against a tuned XGBoost model</li>
-            <li>Streamlit web app to explore predictions</li>
+          <p data-i18n="proj.health.desc">Eine durchgängige ML-Pipeline zur Gesundheitsanalyse – von medizinischen Rohdaten bis zur interaktiven Prognose-App.</p>
+          <ul class="bullets bullets--sm" data-i18n="proj.health.list">
+            <li>EDA und Feature Engineering mit Pandas und Seaborn</li>
+            <li>Benchmarking von Scikit-Learn-Klassifikatoren gegen ein optimiertes XGBoost-Modell</li>
+            <li>Streamlit-Web-App zur Visualisierung der Modellprognosen</li>
           </ul>
           <div class="tags"><span>Python</span><span>Scikit-Learn</span><span>XGBoost</span><span>Streamlit</span></div>
         </article>
@@ -217,43 +221,43 @@
         <article class="project reveal">
           <div class="project__head">
             <span class="project__icon">🏋️</span>
-            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="View on GitHub"><svg><use href="#i-github"/></svg></a>
+            <a class="project__link" href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
           </div>
-          <h3>AI-Based Workout Assistant</h3>
-          <p>A real-time computer-vision coach that counts reps and flags bad form from a live webcam stream.</p>
-          <ul class="bullets bullets--sm">
-            <li>Pose estimation with OpenCV + MediaPipe for automatic rep counting</li>
-            <li>Random Forest classifiers for posture and error detection</li>
+          <h3 data-i18n="proj.workout.title">KI-basierter Workout-Assistent</h3>
+          <p data-i18n="proj.workout.desc">Ein Echtzeit-Computer-Vision-Coach, der Wiederholungen zählt und Haltungsfehler im Live-Webcam-Stream erkennt.</p>
+          <ul class="bullets bullets--sm" data-i18n="proj.workout.list">
+            <li>Pose-Estimation mit OpenCV und MediaPipe zur automatischen Wiederholungszählung</li>
+            <li>Random-Forest-Klassifikatoren zur Haltungs- und Fehleranalyse</li>
           </ul>
           <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Scikit-Learn</span></div>
         </article>
       </div>
       <div class="center reveal">
-        <a href="https://github.com/amey000" target="_blank" rel="noopener" class="btn btn--ghost"><svg><use href="#i-github"/></svg> More on GitHub</a>
+        <a href="https://github.com/amey000" target="_blank" rel="noopener" class="btn btn--ghost"><svg><use href="#i-github"/></svg> <span data-i18n="proj.more">Mehr auf GitHub</span></a>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section class="section container" id="skills">
       <div class="section__head reveal">
-        <span class="section__kicker mono">04 · Skills</span>
-        <h2>My toolkit</h2>
+        <span class="section__kicker mono" data-i18n="skills.kicker">04 · Kenntnisse</span>
+        <h2 data-i18n="skills.title">Mein Werkzeugkasten</h2>
       </div>
       <div class="skills">
         <div class="skill-group reveal">
-          <h3><span class="skill-group__icon">📊</span> Data Analysis &amp; BI</h3>
-          <div class="tags tags--lg"><span>EDA</span><span>KPI Monitoring</span><span>Root Cause Analysis</span><span>Reporting Automation</span><span>Power BI</span><span>Tableau</span></div>
+          <h3><span class="skill-group__icon">📊</span> <span data-i18n="skills.bi">Datenanalyse &amp; BI</span></h3>
+          <div class="tags tags--lg" data-i18n="skills.biTags"><span>EDA</span><span>KPI-Monitoring</span><span>Ursachenanalyse</span><span>Reporting-Automatisierung</span><span>Power BI</span><span>Tableau</span></div>
         </div>
         <div class="skill-group reveal">
-          <h3><span class="skill-group__icon">🗄️</span> Data Engineering &amp; Databases</h3>
+          <h3><span class="skill-group__icon">🗄️</span> <span data-i18n="skills.de">Data Engineering &amp; Datenbanken</span></h3>
           <div class="tags tags--lg"><span>SQL</span><span>Amazon Redshift</span><span>ETL</span><span>Data Warehousing</span><span>Qdrant</span></div>
         </div>
         <div class="skill-group reveal">
-          <h3><span class="skill-group__icon">💻</span> Programming</h3>
+          <h3><span class="skill-group__icon">💻</span> <span data-i18n="skills.prog">Programmierung</span></h3>
           <div class="tags tags--lg"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Seaborn</span><span>SQL</span><span>R</span></div>
         </div>
         <div class="skill-group reveal">
-          <h3><span class="skill-group__icon">🧠</span> Machine Learning &amp; AI</h3>
+          <h3><span class="skill-group__icon">🧠</span> <span data-i18n="skills.ml">Machine Learning &amp; KI</span></h3>
           <div class="tags tags--lg"><span>Scikit-Learn</span><span>XGBoost</span><span>PyTorch</span><span>LLMs</span><span>RAG</span><span>LoRA</span><span>OpenCV</span></div>
         </div>
         <div class="skill-group reveal">
@@ -266,58 +270,58 @@
     <!-- EDUCATION -->
     <section class="section container" id="education">
       <div class="section__head reveal">
-        <span class="section__kicker mono">05 · Education</span>
-        <h2>Academic path</h2>
+        <span class="section__kicker mono" data-i18n="edu.kicker">05 · Ausbildung</span>
+        <h2 data-i18n="edu.title">Akademischer Werdegang</h2>
       </div>
       <div class="edu">
         <article class="card edu__item reveal">
-          <span class="pill pill--accent">Upcoming</span>
+          <span class="pill pill--accent" data-i18n="edu.upcoming">Ab 2027</span>
           <h3>MSc Data Analytics</h3>
-          <p class="card__sub">BSBI · Berlin, Germany</p>
+          <p class="card__sub" data-i18n="edu.bsbi">BSBI · Berlin, Deutschland</p>
           <p class="mono edu__date">02/2027 – 08/2028</p>
         </article>
         <article class="card edu__item reveal">
-          <span class="pill">30 ECTS</span>
-          <h3>Master's Coursework, Artificial Intelligence &amp; Robotics</h3>
-          <p class="card__sub">Hochschule Hof, University of Applied Sciences · Germany</p>
-          <ul class="bullets bullets--sm edu__courses">
-            <li>Data Mining and Machine Learning</li>
-            <li>Intelligent Robotics</li>
-            <li>AI Project</li>
-            <li>New Technologies in AI and Robotics (seminar)</li>
-            <li>New Technologies in Computer Science (seminar)</li>
-            <li>German as a Foreign Language (B1.1)</li>
+          <span class="pill" data-i18n="edu.ects">30 ECTS absolviert</span>
+          <h3 data-i18n="edu.hofTitle">Masterstudium Künstliche Intelligenz &amp; Robotik</h3>
+          <p class="card__sub" data-i18n="edu.hofSub">Hochschule Hof, University of Applied Sciences · Deutschland</p>
+          <ul class="bullets bullets--sm edu__courses" data-i18n="edu.hofList">
+            <li>Data Mining und Machine Learning</li>
+            <li>Intelligente Robotik</li>
+            <li>KI-Projekt</li>
+            <li>Neue Technologien in KI und Robotik (Seminar)</li>
+            <li>Neue Technologien in der Informatik (Seminar)</li>
+            <li>Deutsch als Fremdsprache (B1.1)</li>
           </ul>
           <p class="mono edu__date">03/2025 – 09/2026</p>
         </article>
         <article class="card edu__item reveal">
-          <span class="pill">Completed</span>
-          <h3>B.Tech in Computer Science &amp; Engineering</h3>
-          <p class="card__sub">Shivaji University · Kolhapur, India</p>
+          <span class="pill" data-i18n="edu.done">Abgeschlossen</span>
+          <h3 data-i18n="edu.btech">B.Tech in Informatik und Computertechnik</h3>
+          <p class="card__sub" data-i18n="edu.shivaji">Shivaji University · Kolhapur, Indien</p>
           <p class="mono edu__date">07/2019 – 07/2023</p>
         </article>
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS -->
+    <!-- ENGAGEMENT -->
     <section class="section container" id="engagement">
       <div class="section__head reveal">
-        <span class="section__kicker mono">06 · Engagement</span>
-        <h2>Beyond work</h2>
+        <span class="section__kicker mono" data-i18n="eng.kicker">06 · Engagement</span>
+        <h2 data-i18n="eng.title">Über die Arbeit hinaus</h2>
       </div>
       <div class="engage">
         <article class="card engage__item reveal">
           <span class="engage__icon">🛡️</span>
           <div>
-            <h3>Cyber Security Awareness Seminar</h3>
-            <p>Ran a hands-on IT security seminar for 100+ participants with practical tips for staying safe online.</p>
+            <h3 data-i18n="eng.cyberT">Cyber Security Awareness</h3>
+            <p data-i18n="eng.cyberD">Seminar für über 100 Teilnehmende mit praxisnahen Tipps zur IT-Sicherheit durchgeführt.</p>
           </div>
         </article>
         <article class="card engage__item reveal">
           <span class="engage__icon">🏆</span>
           <div>
             <h3>Smart India Hackathon 2022</h3>
-            <p>Made it through four rounds of India's nationwide programming competition.</p>
+            <p data-i18n="eng.sihD">Erfolgreiche Teilnahme an vier Runden des landesweiten Programmierwettbewerbs in Indien.</p>
           </div>
         </article>
       </div>
@@ -326,16 +330,16 @@
     <!-- CONTACT -->
     <section class="section container" id="contact">
       <div class="section__head reveal">
-        <span class="section__kicker mono">07 · Contact</span>
-        <h2>Let's work together</h2>
-        <p class="section__lead">I'm looking for Data Analyst, BI and working-student roles in Germany. If you have one, or just want to talk data, I'd like to hear from you.</p>
+        <span class="section__kicker mono" data-i18n="contact.kicker">07 · Kontakt</span>
+        <h2 data-i18n="contact.title">Lassen Sie uns zusammenarbeiten</h2>
+        <p class="section__lead" data-i18n="contact.lead">Ich suche Stellen als Data Analyst, im BI-Bereich oder als Werkstudent in Deutschland. Wenn Sie eine passende Position haben oder sich einfach über Daten austauschen möchten, freue ich mich auf Ihre Nachricht.</p>
       </div>
       <div class="contact">
         <a class="contact__tile reveal" href="mailto:amey05ks@gmail.com">
-          <svg><use href="#i-mail"/></svg><span class="contact__k">Email</span><span class="contact__v">amey05ks@gmail.com</span>
+          <svg><use href="#i-mail"/></svg><span class="contact__k">E-Mail</span><span class="contact__v">amey05ks@gmail.com</span>
         </a>
         <a class="contact__tile reveal" href="tel:+4915563039942">
-          <svg><use href="#i-phone"/></svg><span class="contact__k">Phone</span><span class="contact__v">+49 155 63039942</span>
+          <svg><use href="#i-phone"/></svg><span class="contact__k" data-i18n="contact.phone">Telefon</span><span class="contact__v">+49 155 63039942</span>
         </a>
         <a class="contact__tile reveal" href="https://www.linkedin.com/in/14-amey-shete" target="_blank" rel="noopener">
           <svg><use href="#i-linkedin"/></svg><span class="contact__k">LinkedIn</span><span class="contact__v">in/14-amey-shete</span>
@@ -347,29 +351,29 @@
 
       <form class="form card reveal" id="contactForm">
         <div class="form__row">
-          <label>Name<input name="name" required placeholder="Your name" /></label>
-          <label>Email<input name="email" type="email" required placeholder="you@company.com" /></label>
+          <label><span data-i18n="form.name">Name</span><input name="name" required placeholder="Ihr Name" data-i18n-ph="form.namePh" /></label>
+          <label><span data-i18n="form.email">E-Mail</span><input name="email" type="email" required placeholder="sie@firma.de" data-i18n-ph="form.emailPh" /></label>
         </div>
-        <label>Message<textarea name="message" rows="5" required placeholder="Hi Amey, …"></textarea></label>
-        <button class="btn btn--primary" type="submit">Send message <svg><use href="#i-arrow"/></svg></button>
-        <p class="form__note">Opens your email app with the message filled in.</p>
+        <label><span data-i18n="form.msg">Nachricht</span><textarea name="message" rows="5" required placeholder="Hallo Amey, …" data-i18n-ph="form.msgPh"></textarea></label>
+        <button class="btn btn--primary" type="submit"><span data-i18n="form.send">Nachricht senden</span> <svg><use href="#i-arrow"/></svg></button>
+        <p class="form__note" data-i18n="form.note">Öffnet Ihr E-Mail-Programm mit der vorausgefüllten Nachricht.</p>
       </form>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> Amey Shete. Built with HTML, CSS &amp; JS.</p>
+      <p>© <span id="year"></span> Amey Shete. <span data-i18n="footer.built">Erstellt mit HTML, CSS &amp; JS.</span></p>
       <div class="hero__social">
         <a href="https://github.com/amey000" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
         <a href="https://www.linkedin.com/in/14-amey-shete" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
-        <a href="mailto:amey05ks@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+        <a href="mailto:amey05ks@gmail.com" aria-label="E-Mail"><svg><use href="#i-mail"/></svg></a>
       </div>
-      <a href="assets/Amey_Shete_CV.pdf" class="footer__top" download="Amey_Shete_CV.pdf">Download CV ↓</a>
-      <a href="#home" class="footer__top">Back to top ↑</a>
+      <a href="assets/Amey_Shete_CV.pdf" class="footer__top" download="Amey_Shete_CV.pdf" data-i18n="footer.cv">Lebenslauf herunterladen ↓</a>
+      <a href="#home" class="footer__top" data-i18n="footer.top">Nach oben ↑</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
